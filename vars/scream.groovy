@@ -1,3 +1,3 @@
-def call(args) {
-    echo "a!!!!!!!!"
+def call(String message = '') {
+    echo "${message}"
 }
