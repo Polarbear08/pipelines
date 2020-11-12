@@ -1,8 +1,12 @@
+import com.polar.Utils
+
 def call(Closure body) {
     def config = [:]
     body.resolveStrategy = Closure.DELEGATE_FIRST
     body.delegate = config
     body()
+
+    def utils = new Utils()
 
     pipeline {
         agent {
@@ -15,6 +19,7 @@ def call(Closure body) {
             stage('test') {
                 steps {
                     sh 'echo hello world'
+                    utils.sayHello()
                 }
             }
         }
