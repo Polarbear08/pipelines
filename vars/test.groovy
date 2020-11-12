@@ -4,7 +4,7 @@ def call(Closure body) {
     body.delegate = config
     body()
 
-    pipiline {
+    pipeline {
         agent {
             label 'master'
         }
