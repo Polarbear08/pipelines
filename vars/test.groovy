@@ -19,9 +19,7 @@ def call(Closure body) {
             stage('test') {
                 steps {
                     sh 'echo hello world'
-                    script {
-                        utils.sayHello('world')
-                    }
+                    utils.sayHello('world')
                 }
             }
         }
