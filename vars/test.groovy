@@ -16,13 +16,13 @@ def call(Closure body) {
                 steps {
                     sh 'echo hello world'
                     scream()
-                    sayHello('a')
+                    utilities.sayHello('a')
                 }
             }
         }
     }
 }
 
-def sayHello(String message = 'hello') {
-    echo "hello ${message}"
-}
+// def sayHello(String message = 'hello') {
+//     echo "hello ${message}"
+// }
