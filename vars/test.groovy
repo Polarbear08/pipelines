@@ -6,8 +6,6 @@ def call(Closure body) {
     body.delegate = config
     body()
 
-    def utils = new Utils(this)
-
     pipeline {
         agent {
             label 'master'
@@ -19,7 +17,7 @@ def call(Closure body) {
             stage('test') {
                 steps {
                     sh 'echo hello world'
-                    utils.sayHello('world')
+                    utils.screamHello()
                 }
             }
         }
