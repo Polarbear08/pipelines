@@ -1,5 +1,3 @@
 def call(String message = 'hello') {
-    node {
-        echo "helo ${message}"
-    }
+    echo "helo ${message}"
 }
