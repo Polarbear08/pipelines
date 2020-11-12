@@ -16,6 +16,7 @@ def call(Closure body) {
                 steps {
                     sh 'echo hello world'
                     scream()
+                    utils.sayHello 'a'
                 }
             }
         }
