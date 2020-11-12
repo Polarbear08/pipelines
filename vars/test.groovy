@@ -13,7 +13,9 @@ def call(Closure body) {
         }
         stages {
             stage('test') {
-                sh 'echo hello world'
+                steps {
+                    sh 'echo hello world'
+                }
             }
         }
     }
