@@ -15,7 +15,7 @@ def call(Closure body) {
             stage('test') {
                 steps {
                     sh 'echo hello world'
-                    utils.screamHello()
+                    utils.sayHello('yeah')
                 }
             }
         }
