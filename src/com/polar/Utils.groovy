@@ -1,8 +1,13 @@
 package com.polar
 
 class Utils implements Serializable {
+    def steps
+
+    Utils(steps) {
+        this.steps = steps
+    }
     
     def sayHello(String message) {
-        sh "echo hello, ${message}"
+        this.steps.sh "echo hello, ${message}"
     }
 }

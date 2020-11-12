@@ -6,7 +6,7 @@ def call(Closure body) {
     body.delegate = config
     body()
 
-    def utils = new Utils()
+    def utils = new Utils(this)
 
     pipeline {
         agent {
