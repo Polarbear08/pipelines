@@ -6,9 +6,6 @@ def call(Closure body) {
     body.delegate = config
     body()
 
-    def utilities = new Utils(this)
-    println this.class.name
-
     pipeline {
         agent {
             label 'master'
@@ -19,14 +16,11 @@ def call(Closure body) {
         stages {
             stage('test') {
                 steps {
-                    script {
-                        sh 'echo hello world'
-                        sh """
-                            echo ${this.class.name}
-                        """
-                        utilities.sayHello('a')
-                        utils.sayHello('aaa')
-                    }
+                    sh 'echo hello world'
+                    sh """
+                        echo ${this.class.name}
+                    """
+                    utilities.sayHello('a')
                 }
             }
         }
