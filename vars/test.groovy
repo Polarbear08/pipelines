@@ -16,7 +16,7 @@ def call(Closure body) {
                 steps {
                     script {
                         utils.sayHello message2: 'bbc'
-                        utils.sayYeah
+                        utils.sayYeah()
                         utils.sayYeah yeah: 'green'
                     }
                 }

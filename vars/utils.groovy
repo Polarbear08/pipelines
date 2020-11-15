@@ -8,4 +8,5 @@ def sayYeah(Map args) {
     sh """
         echo ${params.yeah}
     """
+    sayHello message: 'yes'
 }
