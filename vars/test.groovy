@@ -20,7 +20,9 @@ def call(Closure body) {
                 steps {
                     script {
                         sh 'echo hello world'
-                        scream()
+                        sh """
+                            echo ${this.class.name}
+                        """
                         utilities.sayHello('a')
                     }
                 }
