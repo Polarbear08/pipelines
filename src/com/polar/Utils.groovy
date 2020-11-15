@@ -5,10 +5,11 @@ class Utils implements Serializable {
 
     Utils(steps) {
         this.steps = steps
-        println this.steps
     }
     
     def sayHello(String message) {
+        this.steps.sh "this.steps: ${this.steps}"
+        this.steps.sh "this.steps.sh: ${this.steps.sh}"
         this.steps.sh "echo hello, ${message}"
     }
 }
