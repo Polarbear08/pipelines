@@ -7,6 +7,7 @@ def call(Closure body) {
     body()
 
     def utilities = new Utils(this)
+    println this.class.name
 
     pipeline {
         agent {
