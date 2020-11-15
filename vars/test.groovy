@@ -21,7 +21,7 @@ def call(Closure body) {
                         echo ${this.class.name}
                     """
                     script {
-                        utilities.sayHello message: 'a'
+                        utilities.sayHello message: 'a', message2: 'bb'
                     }
                 }
             }
