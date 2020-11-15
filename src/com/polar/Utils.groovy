@@ -5,6 +5,7 @@ class Utils implements Serializable {
 
     Utils(steps) {
         this.steps = steps
+        println this.steps
     }
     
     def sayHello(String message) {
