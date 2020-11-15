@@ -24,8 +24,8 @@ def call(Closure body) {
                         sh """
                             echo ${this.class.name}
                         """
-                        this.sh "a"
                         utilities.sayHello('a')
+                        utils.sayHello 'aaa'
                     }
                 }
             }
