@@ -1,3 +1,3 @@
-def sayHello(String message = 'hello', String message2 = 'tell me') {
-    echo "helo ${message}, ${message2}"
+def sayHello(Map params = [message: 'aa', message2: 'bb']) {
+    echo "helo ${params.message}, ${params.message2}"
 }
