@@ -8,8 +8,9 @@ class Utils implements Serializable {
     }
     
     def sayHello(String message) {
-        this.steps.sh "this.steps: ${this.steps}"
-        this.steps.sh "this.steps.sh: ${this.steps.sh}"
+        this.steps.sh "this: ${this.class.name}"
+        this.steps.sh "this.steps: ${this.steps.class.name}"
+        this.steps.sh "this.steps.sh: ${this.steps.sh.class.name}"
         this.steps.sh "echo hello, ${message}"
     }
 }
